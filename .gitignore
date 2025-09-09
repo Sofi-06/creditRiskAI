@@ -40,8 +40,9 @@ venv.bak/
 # PyCharm
 .idea/
 
-# Model files
-*.pkl
+# Model files (excepto nuestro modelo de crédito)
+# *.pkl
+!modelo_xgboost_credit.pkl
 *.h5
 *.joblib
 
