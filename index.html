@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Solicitud de Crédito</title>
+    <style>
+        .slider-container {
+            margin-bottom: 20px;
+        }
+
+        .slider-label {
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>📝 Formulario de Solicitud de Crédito</h2>
+    <form action="/predict" method="post">
+
+        <label>📄 Número de Documento:</label><br>
+        <input type="text" name="documento" pattern="[0-9]+" required><br><br>
+
+        <div class="slider-container">
+            <label class="slider-label">1. ¿Cuántos años tienes? <span id="edad_val">30</span></label>
+            <input type="range" name="edad" min="18" max="99" value="30" oninput="edad_val.innerText = this.value">
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">2. ¿Hace cuánto renovaste tu documento de identidad? (años) <span
+                    id="doc_val">3</span></label>
+            <input type="range" name="doc_publish" min="0" max="50" value="3" oninput="doc_val.innerText = this.value">
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">3. ¿Hace cuánto tiempo trabajas en tu empleo actual? (años) <span
+                    id="empleo_val">2</span></label>
+            <input type="range" name="empleo" min="0" max="50" value="2" oninput="empleo_val.innerText = this.value">
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">4. ¿Hace cuánto cambiaste tu número de celular? (meses) <span
+                    id="celular_val">6</span></label>
+            <input type="range" name="celular" min="0" max="120" value="6" oninput="celular_val.innerText = this.value">
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">5. ¿Hace cuánto actualizaste tu información personal en una entidad oficial?
+                (años) <span id="registro_val">3</span></label>
+            <input type="range" name="registro" min="0" max="50" value="3"
+                oninput="registro_val.innerText = this.value">
+        </div>
+
+        <label>6. ¿Cuál es tu ingreso mensual aproximado? (COP)</label><br>
+        <input type="number" name="ingresos" min="500000" step="50000" required><br><br>
+
+        <label>7. ¿De cuánto dinero es el crédito que estás solicitando? (COP)</label><br>
+        <input type="number" name="credito" min="1000000" step="100000" required><br><br>
+
+        <label>8. ¿Cuál es el valor del bien que planeas comprar con el crédito? (COP)</label><br>
+        <input type="number" name="precio" min="1000000" step="100000" required><br><br>
+
+        <label>9. ¿A qué plazo quieres pagar el crédito? (meses)</label><br>
+        <input type="number" name="plazo" min="6" max="240" required><br><br>
+
+        <label>10. Tipo de vivienda:</label><br>
+        <select name="tipo_vivienda" required>
+            <option value="0.3">Alquilada o compartida</option>
+            <option value="0.5">Propia pequeña / económica</option>
+            <option value="0.8">Propia mediana</option>
+            <option value="1.0">Propia grande / lujo</option>
+        </select><br><br>
+
+
+        <label>11. ¿Vives en una zona muy poblada o poco habitada?</label><br>
+        <select name="region" required>
+            <option value="0.01">Muy poblada</option>
+            <option value="0.05">Intermedia</option>
+            <option value="0.1">Poco habitada</option>
+        </select><br><br>
+
+        <p>12. Calificaciones externas de crédito</p>
+        <small>(Se consultan automáticamente en el sistema ✅)</small><br><br>
+
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+</body>
+
+</html>
