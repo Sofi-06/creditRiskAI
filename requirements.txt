@@ -12,3 +12,8 @@ sqlalchemy
 wtforms
 psycopg2-binary
 gunicorn
+xgboost
+scikit-learn
+importlib-metadata
+markupsafe
+Werkzeug
