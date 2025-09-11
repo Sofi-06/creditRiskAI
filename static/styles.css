@@ -1,0 +1,175 @@
+/* Estilos para el formulario tipo wizard */
+body {
+    background: #f7f8fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow-x: hidden;
+}
+.form-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+    max-width: 700px;
+    margin: 40px auto;
+}
+.progress-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background: #17a2b8;
+    width: 0%;
+    transition: width 0.3s;
+}
+.steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.step {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 8px;
+    font-size: 18px;
+}
+.step.active {
+    background: #17a2b8;
+}
+.step.completed {
+    background: #17a2b8;
+    opacity: 0.7;
+}
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+input[type="text"], input[type="email"], input[type="number"], select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f7f8fa;
+    margin-top: 4px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #212529;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border 0.2s;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #17a2b8;
+    outline: none;
+}
+button, input[type="submit"] {
+    background: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 12px 8px 0 0;
+    transition: background 0.2s;
+}
+button:disabled {
+    background: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+option {
+    font-size: 16px;
+    color: #212529;
+}
+
+/* Estilos para el modal de resultados */
+#resultModal .modal-content {
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(23,162,184,0.12);
+    background: #fff;
+    padding: 0;
+}
+#resultModal .modal-header {
+    background: #f7f8fa;
+    border-bottom: 1px solid #e0e0e0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 24px 32px 16px 32px;
+}
+#resultModal .modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #17a2b8;
+}
+#resultModal .modal-body {
+    padding: 32px 32px 24px 32px;
+}
+#resultModal .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #17a2b8;
+}
+#resultModal .display-4 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #212529;
+}
+#resultModal .badge {
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 12px;
+}
+#resultModal .alert-light {
+    background: #f7f8fa;
+    border: none;
+    color: #212529;
+    font-size: 1rem;
+    margin-top: 18px;
+}
+#resultModal .collapse-toggle {
+    cursor: pointer;
+    color: #17a2b8;
+    font-weight: 600;
+    text-decoration: none;
+}
+#resultModal .arrow {
+    font-size: 1.2rem;
+}
+#resultModal .bg-light {
+    background: #f7f8fa !important;
+}
+#resultModal .modal-dialog {
+    max-width: 900px;
+}
+
+/* Estilos para mostrar flecha personalizada en los combos */
+select {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%2317a2b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px 18px;
+    padding-right: 38px;
+}
