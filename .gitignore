@@ -86,3 +86,6 @@ out/
 # npm
 .npm
 .eslintcache
+
+# Ignore mora-watch local .gitignore (stop tracking the file itself)
+clustering_front/mora-watch/.gitignore
