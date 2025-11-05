@@ -61,3 +61,28 @@ logs/
 
 # Local development settings
 .flaskenv
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# Node build outputs
+dist/
+build/
+.next/
+out/
+
+# Node environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# npm
+.npm
+.eslintcache
